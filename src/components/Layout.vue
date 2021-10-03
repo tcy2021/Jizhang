@@ -15,7 +15,6 @@ export default {
 
 <style lang="scss" scoped>
 .nav-wrapper {
-  border: 1px solid green;
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
