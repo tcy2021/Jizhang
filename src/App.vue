@@ -13,7 +13,8 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
-  font-size: 16px
+  font-size: 16px;
+  background: rgb(245, 245, 245);
 }
 button,input{
   font-family: inherit;
