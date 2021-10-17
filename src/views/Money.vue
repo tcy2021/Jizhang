@@ -1,7 +1,7 @@
 <template>
   <Layout classPrefix="layout">
     <Numberpad :value.sync="record.amount" @submit="saveRecord"/>
-    <Notes field-name="备注"
+    <FormItem field-name="备注"
            placeholder="在这里输入备注"
            @update:value="onUpdateNotes"/>
     <Types :value.sync="record.type"/>
@@ -12,7 +12,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Numberpad from "@/components/money/Numberpad.vue";
-import Notes from "@/components/money/Notes.vue";
+import FormItem from "@/components/money/FormItem.vue";
 import Types from "@/components/money/Types.vue";
 import Tags from "@/components/money/Tags.vue";
 import {Component, Watch} from "vue-property-decorator";
@@ -23,7 +23,7 @@ const recordList= recordListModel.fetch();
 const tagList = tagListModel.fetch()
 
 @Component({
-  components: {Tags, Types, Notes, Numberpad}
+  components: {Tags, Types, FormItem, Numberpad}
 })
 export default class Money extends Vue {
   tags = tagList;
